@@ -40,7 +40,7 @@ In the production mode, we will have only 1 server running. All the client side 
 ```bash
 
 # Go inside the directory
-cd simple-react-full-stack
+cd FullStackWebApp
 
 # Install dependencies
 yarn (or npm install)
