@@ -1,78 +1,90 @@
-# BookBazaar — React Native (Expo) Book Finder
+📚 BookBazaar
 
-BookBazaar is an intermediate React Native app (Expo) that demonstrates navigation, API integration (Google Books API), authentication context, favorites persisted to AsyncStorage, and a clean project structure — perfect for a 5-minute code walkthrough assessment.
+"BookBazaar" is a React Native app for browsing books, managing favorites, and handling authentication. It demonstrates "auth, navigation, API integration, state management with AsyncStorage", and a clean project architecture 
+---
+
+ 🚀 Features
+
+* User Authentication (Login / Register / Logout)
+* Navigation with React Navigation
+* API Integration: Fetch books from a remote API
+* Favorites: Save favorite books locally using AsyncStorage
+* Clean Architecture: Separate folders for screens, context, navigation, and services
+* State Management using Context API
 
 ---
 
-## Visual output (placeholder images)
-Replace these with real screenshots from your device/emulator before final submission.
+ 🗂 Project Structure
 
-### Home / Search
-![Home]({}/assets/screenshots/home.png)
 
-### Search UI
-![Search]({}/assets/screenshots/search.png)
+BookBazaar/
+├─ App.js                  # Entry point
+├─ navigation/
+│   └─ AppNavigator.js     # Handles navigation flow
+├─ context/
+│   └─ AuthContext.js      # Authentication & global state
+├─ screens/
+│   ├─ HomeScreen.js       # Shows list of books
+│   ├─ BookDetailScreen.js # Book details & favorites
+│   └─ AuthScreens/        # Login / Register screens
+├─ services/
+│   └─ api.js              # API calls
+├─ package.json
+└─ ...
 
-### Book Detail
-![Detail]({}/assets/screenshots/detail.png)
-
-### Favorites
-![Favorites]({}/assets/screenshots/favorites.png)
 
 ---
 
-## Quick start
+⚡ Installation
 
-```bash
-# 1. unzip and open folder
-unzip bookbazaar.zip
-cd bookbazaar
+1. Clone the repository
 
-# 2. install dependencies
+$bash
+git clone https://github.com/Abhinayvalluri1234/BookBazaar.git
+cd BookBazaar
+
+2. Install dependencies
+
+$bash
 npm install
+ or
+yarn install
 
-# 3. start (Expo)
+3. Run the app
+
+$bash
 npm start
-```
+ or
+yarn start
 
-Open in Expo Go or emulator.
 
----
-
-## What to show in a 5-minute walkthrough
-
-- Intro (what problem it solves)  
-- Project structure & main flows (`App.js`, `AuthContext`, `AppNavigator`)  
-- Code walkthrough: `HomeScreen`, `BookCard`, `BookDetail`, `favorites` storage, `services/api.js`  
-- Discuss technical debt and improvements (error handling, pagination, tests)  
-- Deployment notes (Expo/EAS)
+* Open the app in "Android Emulator", "iOS Simulator", or "physical device" using Expo/Metro.
 
 ---
 
-## Folder structure
+ 🔧 Usage
 
-```
-src/
-├── navigation/
-│   └── AppNavigator.js
-├── screens/
-│   ├── LoginScreen.js
-│   ├── HomeScreen.js
-│   ├── BookDetailScreen.js
-│   ├── FavoritesScreen.js
-│   └── ProfileScreen.js
-├── components/
-│   └── BookCard.js
-├── context/
-│   └── AuthContext.js
-├── services/
-│   └── api.js
-└── storage/
-    └── favorites.js
-```
+1. Register or Login – New users can register; existing users can login.
+2. Browse Books – Home screen fetches books from the API in real time.
+3. View Book Details – Click a book to see details and add it to **Favorites**.
+4. Favorites  – Favorites are persisted locally using AsyncStorage.
 
 ---
 
-## Notes
-- The README images are embedded as PNGs under `assets/screenshots/` so they render on GitHub. After recording your Loom, replace placeholders with real screenshots exported from your device/emulator.
-- If you want, I can also generate a polished 5-minute verbatim script tailored to these exact filenames for you to read while recording.
+ 📱 Technologies Used
+
+* React Native
+* React Navigation
+* Context API (State Management)
+* AsyncStorage (Local Storage)
+* Axios / Fetch  (API Calls)
+
+---
+
+📝 Notes
+
+* Replace the API URL in `services/api.js` with your backend or public API.
+* The app follows a **clean folder structure** for maintainability and scalability.
+
+---
+
